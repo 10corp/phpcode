@@ -1,18 +1,3 @@
-<?php
-$a = 18;
-$b= 4;
-echo "$a + $b = " . ($a + $b); //addition 
-echo "\n";
-echo "$a - $b = " . ($a - $b); //subtraction 
-echo "\n";
-echo "($a * $b) = " . ($a * $b); //multiplication 
-echo "\n";
-echo "$a / $b = " . ($a / $b); //division 
-echo "\n";
-echo "$a % $b = " . ($a % $b); //modulus 
-echo "\n";
-
-
 Arithmetic operators in PHP are used to perform basic mathematical operations on variables or values. There are several arithmetic operators available in PHP: 
  
 1. Addition (+): Adds two operands together.
@@ -23,7 +8,7 @@ Arithmetic operators in PHP are used to perform basic mathematical operations on
 6. Exponentiation (** or pow()): Raises the left operand to the power of the right operand.
 Here are some examples of how to use these arithmetic operators in PHP: 
  
-<?php 
+ ```php
 // Addition 
 $a = 5; 
 $b = 10; 
@@ -56,9 +41,23 @@ $result = $base ** $power; // $result will be 8
  
 // Alternatively, you can use the pow() function for exponentiation 
 $result = pow($base, $power); // $result will also be 8 
-
- 
+```
 PHP also has increment and decrement operators, which are used to increment or decrement a variable by one. These operators can be used before or after the variable, and the placement will affect the result: 
 Remember that arithmetic operators follow the standard rules of mathematics, such as the precedence of operators. If you need to change the order of operations, you can use parentheses to enforce the desired calculation order.
 
 These arithmetic operators are fundamental in PHP and are widely used in various mathematical computations within the language. 
+ ```php
+$a = 18;
+$b= 4;
+echo "$a + $b = " . ($a + $b); //addition 
+echo "\n";
+echo "$a - $b = " . ($a - $b); //subtraction 
+echo "\n";
+echo "($a * $b) = " . ($a * $b); //multiplication 
+echo "\n";
+echo "$a / $b = " . ($a / $b); //division 
+echo "\n";
+echo "$a % $b = " . ($a % $b); //modulus 
+echo "\n";
+```
+
