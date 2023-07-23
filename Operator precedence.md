@@ -22,3 +22,41 @@ In PHP, the operator precedence is similar to regular arithmetic operators, foll
 Please note that parentheses can be used to override the default precedence and explicitly specify the order of evaluation within an expression. Expressions inside parentheses are evaluated first before considering the overall precedence.
 
 It's essential to understand operator precedence to write correct and predictable code. Always remember to use parentheses when in doubt or to ensure the desired order of evaluation.
+
+In PHP, as per the operator precedence rules, the expressions are evaluated as follows:
+
+1. `echo "5 - 3 + 2 = " . (5 - 3 + 2);`
+
+   Here, `5 - 3 + 2` is treated as `(5 - 3) + 2`, which evaluates to `4`. So, the output will be:
+   ```
+   5 - 3 + 2 = 4
+   ```
+
+2. `echo "5 + 3 * 2 = " . (5 + 3 * 2);`
+
+   Here, `5 + 3 * 2` is treated as `5 + (3 * 2)`, which evaluates to `11`. So, the output will be:
+   ```
+   5 + 3 * 2 = 11
+   ```
+
+3. `echo "15 / 3 * 5 = " . (15 / 3 * 5);`
+
+   Here, `15 / 3 * 5` is treated as `(15 / 3) * 5`, which evaluates to `25`. So, the output will be:
+   ```
+   15 / 3 * 5 = 25
+   ```
+
+4. `echo "42 + 7 % 2 = " . (42 + 7 % 2);`
+
+   Here, `42 + 7 % 2` is treated as `42 + (7 % 2)`, where `%` is the modulus operator, and it gives the remainder of the division. `7 % 2` evaluates to `1`, so the expression becomes `42 + 1`, which evaluates to `43`. So, the output will be:
+   ```
+   42 + 7 % 2 = 43
+   ```
+
+The output of the PHP code will be:
+```
+5 - 3 + 2 = 4
+5 + 3 * 2 = 11
+15 / 3 * 5 = 25
+42 + 7 % 2 = 43
+```
