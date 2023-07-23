@@ -25,6 +25,16 @@ It's essential to understand operator precedence to write correct and predictabl
 
 In PHP, as per the operator precedence rules, the expressions are evaluated as follows:
 
+```php
+echo "5 - 3 + 2 = " . (5 - 3 + 2); // 5-3+2 is treated as (5-3)+2
+echo "\n";
+echo "5 + 3 * 2 = " . (5 + 3 * 2); // 5+3*2 is treated as 5+(3*2)
+echo "\n";
+echo "15 / 3 * 5 = " . (15 / 3 * 5); // 15/3*5 is treated as (15/3)*5
+echo "\n";
+echo "42 + 7 % 2 = " . (42 + 7 % 2); // 42+7%2 is treated as 42+(7%2)
+```
+
 1. `echo "5 - 3 + 2 = " . (5 - 3 + 2);`
 
    Here, `5 - 3 + 2` is treated as `(5 - 3) + 2`, which evaluates to `4`. So, the output will be:
