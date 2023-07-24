@@ -1,5 +1,31 @@
 Comparison operators in PHP are used to compare values and determine the relationship between them. These operators evaluate expressions and return a Boolean result (either true or false) based on the comparison's outcome. Here are the commonly used comparison operators in PHP:
 
+1. Equal (==): This operator checks if two values are equal and returns true if they are. It does not consider the data types.
+
+2. Identical (===): The identical operator checks if two values are equal and have the same data type. It returns true only if both conditions are met.
+
+3. Not Equal (!=): This operator checks if two values are not equal and returns true if they are different.
+
+4. Not Identical (!==): The not identical operator checks if two values are not equal or have different data types. It returns true if either condition is met.
+
+5. Greater Than (>): This operator checks if the left-hand operand is greater than the right-hand operand and returns true if it is.
+
+6. Less Than (<): The less than operator checks if the left-hand operand is less than the right-hand operand and returns true if it is.
+
+7. Greater Than or Equal To (>=): This operator checks if the left-hand operand is greater than or equal to the right-hand operand and returns true if it is.
+
+8. Less Than or Equal To (<=): The less than or equal to operator checks if the left-hand operand is less than or equal to the right-hand operand and returns true if it is.
+
+Additionally, you mentioned a special comparison operator called the "spaceship operator," also known as the "three-way comparison operator" (<=>). It was introduced in PHP 7 and is used for comparing two expressions. The spaceship operator returns:
+
+- 0 if the operands on both sides are equal.
+- 1 if the left-hand operand is greater.
+- -1 if the right-hand operand is greater.
+
+This operator is useful when you need to perform three-way comparisons in sorting or when ordering elements in an array.
+
+Keep in mind that when using comparison operators, it's essential to be aware of data types and potential type coercion, especially when using the loose comparison operators (== and !=). For more strict comparisons, it's recommended to use the identical operators (=== and !==).
+
 1. Equal (==): This operator checks if two values are equal, regardless of their data types. For example:
 
 ```php
