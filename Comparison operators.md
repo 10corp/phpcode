@@ -1,5 +1,18 @@
 Comparison operators in PHP are used to compare values and determine the relationship between them. These operators evaluate expressions and return a Boolean result (either true or false) based on the comparison's outcome. Here are the commonly used comparison operators in PHP:
 
+| **Operator** | **Name** | **Example** |
+| --- | --- | --- |
+| \== | Equal | `a==b` |
+| \=== | Identical | `a===b` |
+| != | Not Equal | `a!=b` |
+| !== | Not Identical | `a!==b` |
+| \< | Less than | `a<b` |
+| \> | Greater than | `a>b` |
+| \<= | Less than equal to | `a<=b` |
+| \>= | Greater than equal to | `a>=b` |
+|
+
+
 1. Equal (==): This operator checks if two values are equal and returns true if they are. It does not consider the data types.
 
 2. Identical (===): The identical operator checks if two values are equal and have the same data type. It returns true only if both conditions are met.
@@ -21,18 +34,6 @@ Additionally, you mentioned a special comparison operator called the "spaceship 
 - 0 if the operands on both sides are equal.
 - 1 if the left-hand operand is greater.
 - -1 if the right-hand operand is greater.
-
-  | **Operator** | **Name** | **Example** |
-| --- | --- | --- |
-| \== | Equal | `a==b` |
-| \=== | Identical | `a===b` |
-| != | Not Equal | `a!=b` |
-| !== | Not Identical | `a!==b` |
-| \< | Less than | `a<b` |
-| \> | Greater than | `a>b` |
-| \<= | Less than equal to | `a<=b` |
-| \>= | Greater than equal to | `a>=b` |
-
 
 This operator is useful when you need to perform three-way comparisons in sorting or when ordering elements in an array.
 
