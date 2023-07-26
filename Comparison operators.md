@@ -16,7 +16,13 @@ Comparison operators in PHP are used to compare values and determine the relatio
 
 8. Less Than or Equal To (<=): The less than or equal to operator checks if the left-hand operand is less than or equal to the right-hand operand and returns true if it is.
    
-| **Operator** | **Name** | **Example** |
+Additionally, you mentioned a special comparison operator called the "spaceship operator," also known as the "three-way comparison operator" (<=>). It was introduced in PHP 7 and is used for comparing two expressions. The spaceship operator returns:
+
+- 0 if the operands on both sides are equal.
+- 1 if the left-hand operand is greater.
+- -1 if the right-hand operand is greater.
+
+  | **Operator** | **Name** | **Example** |
 | --- | --- | --- |
 | \== | Equal | `a==b` |
 | \=== | Identical | `a===b` |
@@ -26,11 +32,7 @@ Comparison operators in PHP are used to compare values and determine the relatio
 | \> | Greater than | `a>b` |
 | \<= | Less than equal to | `a<=b` |
 | \>= | Greater than equal to | `a>=b` |
-Additionally, you mentioned a special comparison operator called the "spaceship operator," also known as the "three-way comparison operator" (<=>). It was introduced in PHP 7 and is used for comparing two expressions. The spaceship operator returns:
 
-- 0 if the operands on both sides are equal.
-- 1 if the left-hand operand is greater.
-- -1 if the right-hand operand is greater.
 
 This operator is useful when you need to perform three-way comparisons in sorting or when ordering elements in an array.
 
