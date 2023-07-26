@@ -40,7 +40,6 @@ Keep in mind that when using comparison operators, it's essential to be aware of
 1.  Equal (==): This operator checks if two values are equal, regardless of their data types. For example:
 
 ```php
-<?php
 $a = 10;
 $b = "10";
 $result = ($a == $b); // true
@@ -49,7 +48,6 @@ $result = ($a == $b); // true
 1.  Identical (===): The identical operator compares both value and data type. It returns true only if both the value and data type of the operands are the same.
 
 ```php
-<?php
 $a = 10;
 $b = "10";
 $result = ($a === $b); // false
@@ -58,7 +56,6 @@ $result = ($a === $b); // false
 1.  Not Equal (!=): This operator checks if two values are not equal. It returns true if the values are different.
 
 ```php
-<?php
 $a = 5;
 $b = 10;
 $result = ($a != $b); // true
@@ -67,7 +64,6 @@ $result = ($a != $b); // true
 1.  Not Identical (!==): The not identical operator checks if both the value and data type of the operands are not the same.
 
 ```php
-<?php
 $a = 5;
 $b = "5";
 $result = ($a !== $b); // true
@@ -76,7 +72,6 @@ $result = ($a !== $b); // true
 1.  Greater Than (>): This operator checks if the left operand is greater than the right operand.
 
 ```php
-<?php
 $a = 10;
 $b = 5;
 $result = ($a > $b); // true
@@ -85,7 +80,6 @@ $result = ($a > $b); // true
 1.  Less Than (\<): This operator checks if the left operand is less than the right operand.
 
 ```php
-<?php
 $a = 5;
 $b = 10;
 $result = ($a < $b); // true
@@ -94,7 +88,6 @@ $result = ($a < $b); // true
 1.  Greater Than or Equal To (>=): This operator checks if the left operand is greater than or equal to the right operand.
 
 ```php
-<?php
 $a = 10;
 $b = 10;
 $result = ($a >= $b); // true
@@ -103,7 +96,6 @@ $result = ($a >= $b); // true
 1.  Less Than or Equal To (\<=): This operator checks if the left operand is less than or equal to the right operand.
 
 ```php
-<?php
 $a = 5;
 $b = 10;
 $result = ($a <= $b); // true
@@ -117,14 +109,12 @@ The spaceship operator was introduced in PHP 7 and is used for combined comparis
 *   \-1 if the right expression is greater.
 
 ```php
-<?php
 $a = 5;
 $b = 10;
 $result = ($a <=> $b); // returns -1
 ```
 
 ```php
-<?php
 $a = 4;
 $b = '4';
 if ($a == $b)
@@ -137,7 +127,6 @@ if ($a === $b)
     echo 'a and b are identical'; // this won't be printed
     
 }
-?>
 ```
 
 The spaceship operator is useful for sorting and comparing arrays.
