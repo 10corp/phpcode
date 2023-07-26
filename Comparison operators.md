@@ -116,6 +116,23 @@ $b = 10;
 $result = ($a <=> $b); // returns -1
 ```
 
+```php
+<?php
+$a = 4;
+$b = '4';
+if ($a == $b)
+{
+    echo 'a and b are equal'; // this will be printed
+    
+}
+if ($a === $b)
+{ //try removing one = and see what happens
+    echo 'a and b are identical'; // this won't be printed
+    
+}
+?>
+```
+
 The spaceship operator is useful for sorting and comparing arrays.
 
 Keep in mind that when using comparison operators, be cautious of the data types being compared, especially with "==" and "===", as their behavior can sometimes lead to unexpected results. It's generally safer to use the identical operator "===" when you want to ensure both value and data type are the same during comparison.
