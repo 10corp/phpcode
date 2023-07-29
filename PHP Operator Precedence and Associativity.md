@@ -41,53 +41,37 @@ Associativity determines the grouping of operators with the same precedence. PHP
 Left-Associative: When operators are left-associative, they are evaluated from left to right. For example, the addition and subtraction operators are left-associative, so in the expression `10 - 4 + 2`, the subtraction will be performed first, followed by the addition.
 
 Right-Associative: When operators are right-associative, they are evaluated from right to left. The exponentiation operator (`**`) is an example of a right-associative operator. In the expression `2 ** 3 ** 2`, the exponentiation is performed from right to left, meaning `3 ** 2` is evaluated first, resulting in `9`, and then `2 ** 9` is evaluated, resulting in `512`.
-
 | Precedence | Operator | Description | Associativity |
 | --- | --- | --- | --- |
-| 1 | `clone` | Clone an object | Right |
-|   | `new` | Create a new object | Right |
-|   | `[...]` | Array declaration | Left |
-| 2 | `++` | Pre-increment | Right |
-|   | `--` | Pre-decrement | Right |
-|   | `!` | Logical NOT | Right |
-|   | `~` | Bitwise NOT | Right |
-|   | `(int)` | Type casting (int) | Right |
-|   | `(float)` | Type casting (float) | Right |
-|   | `(string)` | Type casting (string) | Right |
-|   | `(array)` | Type casting (array) | Right |
-|   | `(object)` | Type casting (object) | Right |
-|   | `(bool)` | Type casting (bool) | Right |
-|   | `(unset)` | Type casting (unset) | Right |
+| 1 | `clone`, `new` | Clone, object creation | Right |
+| 2 | `++`, `--` | Increment, decrement | Right |
+|   | `!`, `~`, `+`, `-` | Logical, bitwise NOT and unary + | Right |
+|   | `(int)`, `(float)`, `(string)`,  
+`(array)`, `(object)`, `(bool)` | Type casting | Right |
 | 3 | `**` | Exponentiation | Right |
-| 4 | `+` | Addition | Left |
-|   | `-` | Subtraction | Left |
-|   | `.` | String concatenation | Left |
-| 5 | `*` | Multiplication | Left |
-|   | `/` | Division | Left |
-|   | `%` | Modulo | Left |
-| 6 | `<<` | Bitwise left shift | Left |
-|   | `>>` | Bitwise right shift | Left |
-| 7 | `<` | Less than | Left |
-|   | `<=` | Less than or equal | Left |
-|   | `>` | Greater than | Left |
-|   | `>=` | Greater than or equal | Left |
-|   | `instanceof` | Instanceof check | Left |
-| 8 | `==` | Equal | Left |
-|   | `!=` | Not equal | Left |
-|   | `===` | Identical | Left |
-|   | `!==` | Not identical | Left |
+| 4 | `*`, `/`, `%` | Multiplication, division, modulus | Left |
+| 5 | `+`, `-` | Addition, subtraction | Left |
+| 6 | `.` | Concatenation | Left |
+| 7 | `<`, `<=`, `>`, `>=` | Comparison | Left |
+|   | `instanceof` | instanceof | Left |
+| 8 | `==`, `!=`, `===`, `!==`, `<>` | Equality, inequality | Left |
 | 9 | `&` | Bitwise AND | Left |
 | 10 | `^` | Bitwise XOR | Left |
-| 11 | \` | \` | Bitwise OR |
+| 11 | | | Bitwise OR | Left |
 | 12 | `&&` | Logical AND | Left |
 | 13 | \` |   | \` |
-| 14 | `??` | Null coalescing | Left |
+| 14 | `??` | Null coalescing | Right |
 | 15 | `? :` | Ternary conditional | Right |
-| 16 | `=`, `+=`, `-=` |   |   |
-| `*=`, `/=`, `%=` |   |   |   |
-| `<<=`, `>>=` |   |   |   |
-| `&=`, `^=`, \` | \=`,<br>`.=`,` ??=\` | Assignment operators |   |
-| 17 | `,` | Comma (for separating expressions) | Left |
+| 16 | `=`, `+=`, `-=`, `*=`, `/=`,  
+`%=`, `.=`, `&=`,  
+`^=`, `&#124;=` | Assignment and compound assignments | Right |
+|   | `??=` | Null coalescing assignment | Right |
+| 17 | `and` | Logical AND | Left |
+| 18 | `xor` | Logical XOR | Left |
+| 19 | `or` | Logical OR | Left |
+| 20 | `,` | Comma | Left |
+
+Remember to verify this information with the official PHP documentation once PHP 8.2 is released.
 
 Note:
 
