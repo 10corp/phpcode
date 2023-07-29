@@ -42,10 +42,6 @@ Left-Associative: When operators are left-associative, they are evaluated from l
 
 Right-Associative: When operators are right-associative, they are evaluated from right to left. The exponentiation operator (`**`) is an example of a right-associative operator. In the expression `2 ** 3 ** 2`, the exponentiation is performed from right to left, meaning `3 ** 2` is evaluated first, resulting in `9`, and then `2 ** 9` is evaluated, resulting in `512`.
 
-As an AI language model, my knowledge cutoff is in September 2021, and I don't have access to real-time updates or future releases. As of my last update, PHP 8.2 has not been released yet. Therefore, I cannot provide a table specific to PHP 8.2.
-
-However, I can provide you with the operator precedence and associativity table for PHP as of version 8.1.
-
 Here's the operator precedence and associativity table for PHP 8.1:
 
 | Precedence | Operator                           | Description                       | Associativity |
