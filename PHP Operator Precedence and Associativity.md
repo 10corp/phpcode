@@ -41,38 +41,41 @@ Associativity determines the grouping of operators with the same precedence. PHP
 Left-Associative: When operators are left-associative, they are evaluated from left to right. For example, the addition and subtraction operators are left-associative, so in the expression `10 - 4 + 2`, the subtraction will be performed first, followed by the addition.
 
 Right-Associative: When operators are right-associative, they are evaluated from right to left. The exponentiation operator (`**`) is an example of a right-associative operator. In the expression `2 ** 3 ** 2`, the exponentiation is performed from right to left, meaning `3 ** 2` is evaluated first, resulting in `9`, and then `2 ** 9` is evaluated, resulting in `512`.
-| Precedence | Operator | Description | Associativity |
-| --- | --- | --- | --- |
-| 1 | `clone`, `new` | Clone, object creation | Right |
-| 2 | `++`, `--` | Increment, decrement | Right |
-|   | `!`, `~`, `+`, `-` | Logical, bitwise NOT and unary + | Right |
-|   | `(int)`, `(float)`, `(string)`,  
-`(array)`, `(object)`, `(bool)` | Type casting | Right |
-| 3 | `**` | Exponentiation | Right |
-| 4 | `*`, `/`, `%` | Multiplication, division, modulus | Left |
-| 5 | `+`, `-` | Addition, subtraction | Left |
-| 6 | `.` | Concatenation | Left |
-| 7 | `<`, `<=`, `>`, `>=` | Comparison | Left |
-|   | `instanceof` | instanceof | Left |
-| 8 | `==`, `!=`, `===`, `!==`, `<>` | Equality, inequality | Left |
-| 9 | `&` | Bitwise AND | Left |
-| 10 | `^` | Bitwise XOR | Left |
-| 11 | | | Bitwise OR | Left |
-| 12 | `&&` | Logical AND | Left |
-| 13 | \` |   | \` |
-| 14 | `??` | Null coalescing | Right |
-| 15 | `? :` | Ternary conditional | Right |
-| 16 | `=`, `+=`, `-=`, `*=`, `/=`,  
-`%=`, `.=`, `&=`,  
-`^=`, `&#124;=` | Assignment and compound assignments | Right |
-|   | `??=` | Null coalescing assignment | Right |
-| 17 | `and` | Logical AND | Left |
-| 18 | `xor` | Logical XOR | Left |
-| 19 | `or` | Logical OR | Left |
-| 20 | `,` | Comma | Left |
+
+As an AI language model, my knowledge cutoff is in September 2021, and I don't have access to real-time updates or future releases. As of my last update, PHP 8.2 has not been released yet. Therefore, I cannot provide a table specific to PHP 8.2.
+
+However, I can provide you with the operator precedence and associativity table for PHP as of version 8.1.
+
+Here's the operator precedence and associativity table for PHP 8.1:
+
+| Precedence | Operator                           | Description                       | Associativity |
+|------------|------------------------------------|-----------------------------------|---------------|
+| 1          | `clone`, `new`                     | Clone, object creation            | Right         |
+| 2          | `++`, `--`                         | Increment, decrement              | Right         |
+|            | `!`, `~`, `+`, `-`                 | Logical, bitwise NOT and unary +  | Right         |
+|            | `(int)`, `(float)`, `(string)`,<br>`(array)`, `(object)`, `(bool)` | Type casting  | Right         |
+| 3          | `**`                               | Exponentiation                    | Right         |
+| 4          | `*`, `/`, `%`                      | Multiplication, division, modulus | Left          |
+| 5          | `+`, `-`                           | Addition, subtraction             | Left          |
+| 6          | `.`                                | Concatenation                     | Left          |
+| 7          | `<`, `<=`, `>`, `>=`               | Comparison                        | Left          |
+|            | `instanceof`                       | instanceof                        | Left          |
+| 8          | `==`, `!=`, `===`, `!==`, `<>`     | Equality, inequality              | Left          |
+| 9          | `&`                                | Bitwise AND                       | Left          |
+| 10         | `^`                                | Bitwise XOR                       | Left          |
+| 11         | &#124;                             | Bitwise OR                        | Left          |
+| 12         | `&&`                               | Logical AND                       | Left          |
+| 13         | `||`                               | Logical OR                        | Left          |
+| 14         | `??`                               | Null coalescing                   | Right         |
+| 15         | `? :`                              | Ternary conditional               | Right         |
+| 16         | `=`, `+=`, `-=`, `*=`, `/=`,<br>`%=`, `.=`, `&=`,<br>`^=`, `&#124;=` | Assignment and compound assignments | Right         |
+|            | `??=`                              | Null coalescing assignment        | Right         |
+| 17         | `and`                              | Logical AND                       | Left          |
+| 18         | `xor`                              | Logical XOR                       | Left          |
+| 19         | `or`                               | Logical OR                        | Left          |
+| 20         | `,`                                | Comma                             | Left          |
 
 Remember to verify this information with the official PHP documentation once PHP 8.2 is released.
-
 Note:
 
 *   Operators with higher precedence are evaluated first.
