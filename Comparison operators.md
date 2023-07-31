@@ -132,3 +132,31 @@ if ($a === $b)
 The spaceship operator is useful for sorting and comparing arrays.
 
 Keep in mind that when using comparison operators, be cautious of the data types being compared, especially with "==" and "===", as their behavior can sometimes lead to unexpected results. **It's generally safer to use the identical operator "===" when you want to ensure both value and data type are the same during comparison**.
+
+Let's analyze the PHP code step by step:
+
+1. Three variables are defined: $a, $b, and $c, with the following values:
+   - $a = 5
+   - $b = 2
+   - $c = 4
+
+2. The code then enters an if-else condition:
+
+   - The condition is: $a < $b + $c. In this case, $a (5) is indeed less than $b + $c (2 + 4 = 6), so the code enters the "if" block.
+
+3. Inside the "if" block:
+
+   - The expression inside the echo statement is $a <=> ($c - $b). Let's calculate it step by step:
+
+     - ($c - $b) = 4 - 2 = 2
+     - $a <=> 2 compares $a (5) with 2, resulting in 1, since $a is greater than 2.
+
+4. The output of the code is the result of the comparison inside the "if" block:
+
+   - Since $a (5) is greater than ($c - $b) (2), the output will be 1.
+
+So, when you run the PHP code, it will output:
+
+```
+1
+```
