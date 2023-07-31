@@ -154,3 +154,58 @@ var_dump($e); // Output: bool(true)
 ```
 
 It's worth noting that the difference in evaluation behavior arises when you have complex expressions or multiple conditions combined together. For simple cases like the examples provided, the results will be the same for both sets of operators.
+
+Let's evaluate the expression step by step:
+
+1. Evaluate `$a && $b`: Since `$a` is true and `$b` is false, the result is false.
+
+2. Evaluate the first part of the `if` condition: `$a && $b || $c`
+   Since `&&` has higher precedence than `||`, the expression becomes `false || $c`.
+
+3. Evaluate `false || $c`: The result is true because one of the operands (`$c`) is true.
+
+4. Evaluate the second part of the `if` condition: `(!$c)`
+   The value of `!$c` is false since `!$c` means the negation of `$c`, and `$c` is true.
+
+5. Combine the results of both parts of the `if` condition: `true || false`
+   Since `||` (OR) returns true if at least one of the operands is true, the overall result is true.
+
+Therefore, the code will output "inside if". The final evaluation of the if condition is true, and the code block inside the `if` statement will be executed.
+
+Here's the PHP code with the output:
+
+```php
+<?php
+$a = true;
+$b = false;
+$c = true;
+if ($a && $b || $c || (!$c))
+    echo "inside if";
+else 
+    echo "inside else";
+
+// Output: inside if
+```
+
+The result is as expected: "inside if".
+
+In the provided PHP code, the expression `$e = false and true;` will be evaluated, and the value of `$e` will be set accordingly.
+
+PHP has different operator precedence levels, and `and` has lower precedence than the assignment operator `=`. When using `and` in an expression, it's essential to use parentheses to ensure the correct evaluation order.
+
+Let's break down the expression step by step:
+
+1. Evaluate `false and true`: The `and` operator is used without parentheses. However, since `=` has higher precedence, the assignment happens first before evaluating the `and` operation.
+
+2. Assign the result of `false and true` to `$e`: The expression `false and true` evaluates to `false`, so the value of `$e` will be set to `false`.
+
+Here's the PHP code with the result:
+
+```php
+<?php
+$e = false and true;
+var_dump($e); // Output: bool(false)
+?>
+```
+
+The value of `$e` will be `false`.
