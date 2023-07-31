@@ -135,6 +135,21 @@ Keep in mind that when using comparison operators, be cautious of the data types
 
 Let's analyze the PHP code step by step:
 
+```php
+<?php
+$a = 5;
+$b = 2;
+$c = 4;
+if ($a < $b + $c)
+{
+    echo $a<=>($c - $b);
+}
+else
+{
+    echo ($c - $b) <=>$a;
+}
+```
+
 1. Three variables are defined: $a, $b, and $c, with the following values:
    - $a = 5
    - $b = 2
